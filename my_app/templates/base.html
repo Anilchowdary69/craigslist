@@ -12,15 +12,15 @@
 </head>
 <body>
 
-<nav >
+<nav>
     <div class="container">
-        <a href="/" class = "brand-logo">Craigslist</a>
+        <a href="/" class = "brand-logo" style="color:yellow" >Craigslist</a>
         <ul id= "nav-mobile" class="right">
-            <li><a href="/">Home</a></li>
+            <li><a href="/" style="color:yellow">Home</a></li>
         </ul>
     </div>
-
 </nav>
+
 
 
 
@@ -60,20 +60,15 @@
 </div>
      <form action="{% url 'new_search' %}" method="post">
     {% csrf_token %}
-    <input type="text" name="search" placeholder="search">
-    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-    <i class="material-icons right">send </i>
+    <input type="text" name="search" placeholder="search ">
+    <button class="btn waves-effect waves-light" type="submit" name="action"style="color:red">Submit
+    <i class="material-icons right" >send </i>
     </button>
      </form>
 
 {% block content %}
 
-
-{% end block content %}
-
-
-
-
+{% endblock content %}
 
 </div>
 

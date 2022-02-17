@@ -2,49 +2,25 @@
 {% extends 'base.html' %}
 {% block content %}
 <h2 style="text-align:center">{{ search | title }}</h2>
-
 <div class="row">
+{% for post in final_postings %}
+    <div class="col s4">
+    <div class="card">
+        <div class="card-image">
+            <a href="{{post.1}}"><img src="{{ post.3 }}" alt="/"></a>
+        </div>
+        <div class="card-content">
+            <p>{{post.0}}</p>
+        </div>
+        <div class="card-action">
+            <a href="/" >View Listing Date:{{post.2}}</a>
+        </div>
+    </div>
+</div>
 
-<div class="col s4">
-    <div class="card">
-        <div class="card-image">
-            <a href="/"><img src="https://wallpapercave.com/wp/wp7270798.jpg" alt="/"></a>
-        </div>
-        <div class="card-content">
-            <p>TEST</p>
-        </div>
-        <div class="card-action">
-            <a href="/" >View Listing :Price TEST price</a>
-        </div>
-    </div>
+{% endfor %}
 </div>
-<div class="col s4">
-    <div class="card">
-        <div class="card-image">
-            <a href="/"><img src="https://th.bing.com/th/id/OIP.ZVZw0XFR2teMf76gv4eGJwHaEH?w=330&h=183&c=7&r=0&o=5&pid=1.7" alt="/"></a>
-        </div>
-        <div class="card-content">
-            <p>TEST</p>
-        </div>
-        <div class="card-action">
-            <a href="/" >View Listing :Price TEST price</a>
-        </div>
-    </div>
-</div>
-<div class="col s4">
-    <div class="card">
-        <div class="card-image">
-            <a href="/"><img src="https://th.bing.com/th/id/OIP.nrg0eYBSS7cNG7fhSq7T-QHaFp?w=185&h=141&c=7&r=0&o=5&pid=1.7" alt="/"></a>
-        </div>
-        <div class="card-content">
-            <p>TEST</p>
-        </div>
-        <div class="card-action">
-            <a href="/" >View Listing :Price TEST price</a>
-        </div>
-    </div>
-</div>
-</div>
-{% end block content %}
+{% endblock content %}
+
 
 
