@@ -9,13 +9,14 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
+
 from pathlib import Path
 import django_heroku
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-TEMPLATE_DIR=str(BASE_DIR.joinpath('templates'))
+TEMPLATE_DIR = str(BASE_DIR.joinpath('templates'))
 
 
 # Quick-start development settings - unsuitable for production
@@ -26,7 +27,7 @@ SECRET_KEY = 'django-insecure-*gt@e!tgl0&_2g=8(x#y1p7fxng*z^lc9vdkkvj#5n353236ob
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['127.0.0.1','craigslistapp-django.herokuapp.com/']
+ALLOWED_HOSTS = ['127.0.0.1''craigslistapp-django.herokuapp.com/']
 
 
 # Application definition
@@ -57,7 +58,7 @@ ROOT_URLCONF = 'craigslist.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_DIR,],
+        'DIRS': [TEMPLATE_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -127,5 +128,4 @@ STATICFILES_DIRS = str(BASE_DIR.joinpath('static')),
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-django_heroku.settings(locals())
+django_heroku.settings(locals(),)
