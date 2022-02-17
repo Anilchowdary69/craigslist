@@ -1,0 +1,20 @@
+.card{
+height: 400px;
+overflow:hidden;
+}
+.card-context{
+  overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 16px;
+    max-height: 32px;
+    -webkit-line-clamp:5; /* Write the number of
+                              lines you want to be
+                              displayed */
+    -webkit-box-orient: vertical;
+}
+
+.card-image{
+height: 250px;
+overflow:hidden;
+}
